@@ -58,6 +58,7 @@
   .teammate-data {
     text-align: left;
     width: 100%;
+    gap: 20px;
   }
   .teammate-social-icons {
     justify-content: space-evenly;
