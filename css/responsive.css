@@ -6,79 +6,67 @@
 
 /* 👇👇👇 Add the styles that belong to the DESKTOP view only beneath 👇👇👇 */
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   /* big landscape tablets, desktops */
+  .top-navigation .trigram {
+    display: none;
+  }
 }
 
 /* 👇👇👇 Add the media rule and the styles that are common within the TABLET and MOBILE views beneath 👇👇👇 */
 
-@media (min-width: 767px) {
+@media (max-width: 1023px) {
   /* tablets, landscape mobile phones */
 }
 
 /* 👇👇👇 Add the media rule and the styles that belong to the MOBILE view only beneath 👇👇👇 */
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 699px) {
   /* mobile phones */
-
   .content {
-    align-items: center;
-    justify-content: center;
+    max-width: 699px;
     text-align: center;
   }
-
-  .header-content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .top-navigation {
-    display: flex;
-    flex-direction: column;
+  .content p.subtext {
     width: 100%;
   }
-
+  .content .header-content {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .top-navigation ul {
+    display: none;
+  }
   .portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    overflow: hidden;
-    width: 100%;
+    flex-direction: column;
   }
-
   .teammate {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 5px;
+    flex-direction: row;
     width: 100%;
+    border: black 1px solid;
   }
-
-  .teammate-data {
-    width: 100%;
-    text-align: center;
-    align-items: center;
+  .teammates-list:before,
+  .teammates-list:after {
+    display: none;
   }
-
   .teammates-list-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
     width: 100%;
-  }
-
-  .social-icons {
-    display: flex;
     flex-direction: column;
-    width: 100%;
-    align-items: center;
   }
-
+  .teammate-data {
+    text-align: left;
+    width: 100%;
+  }
+  .teammate-social-icons {
+    justify-content: space-evenly;
+  }
   .footer-contacts {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
     align-items: center;
+  }
+  footer .social-icons,
+  .footer-contacts {
+    flex-direction: column;
   }
 }
