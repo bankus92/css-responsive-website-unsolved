@@ -4,70 +4,287 @@
   * Add the media rule and the styles that belong to the MOBILE view only
 */
 
-/* 👇👇👇 Add the styles that belong to the DESKTOP view only beneath 👇👇👇 */
-
-@media (min-width: 1024px) {
-  /* big landscape tablets, desktops */
-  .top-navigation .trigram {
-    display: none;
-  }
-}
-
-/* 👇👇👇 Add the media rule and the styles that are common within the TABLET and MOBILE views beneath 👇👇👇 */
-
-@media (max-width: 1023px) {
-  /* tablets, landscape mobile phones */
-}
-
 /* 👇👇👇 Add the media rule and the styles that belong to the MOBILE view only beneath 👇👇👇 */
-
-@media (max-width: 699px) {
+@media only screen and (max-width: 767px) {
   /* mobile phones */
+
+  /*main*/
   .content {
-    max-width: 699px;
     text-align: center;
   }
+
   .content p.subtext {
     width: 100%;
   }
+
+  /*header*/
   .content .header-content {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
   }
+
   .top-navigation ul {
     display: none;
   }
+
+  /*portfolio*/
   .portfolio-list {
     flex-direction: column;
   }
+
+  /*teammates*/
   .teammate {
     padding: 5px;
     flex-direction: row;
     width: 100%;
-    border: black 1px solid;
+    border: #969696 2px solid;
   }
+
   .teammates-list:before,
   .teammates-list:after {
     display: none;
   }
+
   .teammates-list-wrapper {
     width: 100%;
     flex-direction: column;
   }
+
   .teammate-data {
     text-align: left;
     width: 100%;
     gap: 20px;
   }
+
   .teammate-social-icons {
+    width: 50%;
     justify-content: space-evenly;
   }
+
+  /*footer*/
   .footer-contacts {
     align-items: center;
   }
+
   footer .social-icons,
   .footer-contacts {
     flex-direction: column;
+  }
+
+  footer .social-icons div {
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .social-icons div span {
+    color: white;
+  }
+
+  footer .social-icons .icon {
+    background-color: white;
+  }
+
+  .footer-contacts ul li {
+    color: white;
+  }
+
+  .footer-contacts ul li a {
+    font: bolder;
+    color: white;
+  }
+}
+
+/* 👇👇👇 Add the media rule and the styles that are common within the TABLET views beneath 👇👇👇 */
+@media only screen and (min-width: 768px) {
+  /* tablets, landscape mobile phones */
+
+  /*main*/
+  .content {
+    text-align: center;
+  }
+
+  .content p.subtext {
+    width: 100%;
+  }
+
+  /*header*/
+  .top-navigation ul li {
+    display: none;
+  }
+
+  /*portfolio*/
+  .portfolio-list {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .portfolio-item {
+    flex-direction: row;
+  }
+
+  .portfolio-item-info {
+    justify-content: flex-start;
+  }
+
+  /*teammates*/
+  .teammates-list:before,
+  .teammates-list:after {
+    display: none;
+  }
+
+  .teammates-list-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .teammate {
+    width: 47%;
+  }
+
+  .teammate-data {
+    align-items: center;
+  }
+
+  .teammate-img-wrapper {
+    width: 100%;
+  }
+
+  /*footer*/
+  footer .social-icons {
+    gap: 5px;
+  }
+
+  footer .social-icons div {
+    flex-direction: column;
+    width: 50px;
+  }
+
+  footer .social-icons .icon {
+    background-color: white;
+  }
+
+  footer .social-icons span {
+    display: none;
+  }
+
+  footer .footer-contacts {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  footer .footer-contacts div {
+    width: 33%;
+  }
+
+  .footer-contacts ul li a {
+    font: bolder;
+    color: white;
+  }
+}
+
+/* 👇👇👇 Add the styles that belong to the DESKTOP view only beneath 👇👇👇 */
+@media only screen and (min-width: 1024px) {
+  /* big landscape tablets, desktops */
+
+  /*header*/
+  .top-navigation .trigram {
+    display: none;
+  }
+
+  .top-navigation ul li {
+    display: unset;
+    text-align: center;
+    color: black;
+  }
+
+  .top-navigation ul li:hover {
+    text-decoration: underline solid;
+    transition: 0.7s;
+  }
+
+  /*portfolio*/
+  .portfolio-list {
+    flex-direction: row;
+  }
+
+  .portfolio-item {
+    flex-direction: column;
+  }
+
+  /*teammates*/
+  .teammates-list {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .teammates-list-wrapper {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .teammates-list:before,
+  .teammates-list:after {
+    display: unset;
+  }
+
+  .teammate-data {
+    display: unset;
+    text-align: left;
+  }
+
+  .teammate-social-icons div:hover {
+    background-color: gray;
+    transition: 0.7s;
+    cursor: pointer;
+  }
+
+  /*footer*/
+  footer .social-icons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  footer .social-icons .icon {
+    background-color: #969696;
+  }
+
+  footer .social-icons div {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  footer .social-icons div:hover {
+    color: white;
+    transition: 0.7s;
+    cursor: pointer;
+  }
+
+  footer .social-icons div span {
+    display: unset;
+  }
+
+  .footer-contacts ul li a {
+    font: normal;
+    color: #969696;
+  }
+
+  .footer-contacts ul li a:hover {
+    text-decoration: underline;
+    color: white;
+    transition: 0.7s;
+  }
+
+  footer .footer-contacts {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  footer .footer-contacts div {
+    width: 33%;
   }
 }
