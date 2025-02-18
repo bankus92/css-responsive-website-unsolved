@@ -251,16 +251,30 @@
     background-color: #969696;
   }
 
+  footer .social-icons .icon:hover,
+  footer .social-icons .icon span:hover {
+    background-color: white;
+    transition: 0.7s;
+    cursor: pointer;
+  }
+
+  footer .social-icons:hover {
+    background-color: black;
+    background-clip: text;
+    transition: 0.7s;
+  }
+
   footer .social-icons div {
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
   }
 
-  footer .social-icons div:hover {
+  footer .social-icons div span:hover {
+    text-decoration: underline;
+    cursor: pointer;
     color: white;
     transition: 0.7s;
-    cursor: pointer;
   }
 
   footer .social-icons div span {
@@ -273,8 +287,9 @@
   }
 
   .footer-contacts ul li a:hover {
-    text-decoration: underline;
     color: white;
+    cursor: pointer;
+    text-decoration: underline;
     transition: 0.7s;
   }
 
